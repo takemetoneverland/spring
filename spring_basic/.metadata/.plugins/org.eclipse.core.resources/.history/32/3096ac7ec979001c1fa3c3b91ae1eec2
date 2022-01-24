@@ -1,0 +1,13 @@
+package basic.quiz;
+
+public class Computer {
+	
+	private Mouse mouse;
+	private Keyboard keyboard;
+	private Monitor monitor;
+
+	public void computerInfo() {
+		for(String info : )
+	}
+	
+}

@@ -1,0 +1,9 @@
+package basic.quiz;
+
+public class Computer {
+
+	public void computerInfo() {
+		
+	}
+	
+}

@@ -1,0 +1,15 @@
+package basic.quiz;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Computer {
+	
+	@Autowired
+	private Mouse mouse;
+	private Keyboard keyboard;
+	private Monitor monitor;
+
+	public void computerInfo() {
+		mouse.info();
+		}
+	}

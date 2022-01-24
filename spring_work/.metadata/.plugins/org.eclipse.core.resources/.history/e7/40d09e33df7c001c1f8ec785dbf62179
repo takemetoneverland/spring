@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h2>요청 파라미터값 테스트!</h2>
+	
+	<form action="/basic/request/join" method="post">
+		<fieldset>
+			<legend>회원 가입 양식</legend>
+		</fieldset>
+	</form>
+
+</body>
+</html>

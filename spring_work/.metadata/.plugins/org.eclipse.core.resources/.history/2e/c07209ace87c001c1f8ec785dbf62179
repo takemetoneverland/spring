@@ -1,0 +1,14 @@
+package com.spring.basic.model;
+
+import java.util.List;
+
+public class UserVO {
+
+	//VO 클래스의 멤버변수명과 파라미터변수명 정확하게 일치해야
+	//커맨드 객체가 정상적으로 동작한다.
+	private String userId;
+	private String userPw;
+	private String userName;
+	private List<String> hobby;
+	
+}

@@ -1,0 +1,5 @@
+package com.spring.basic.controller;
+
+public class BirthController {
+
+}

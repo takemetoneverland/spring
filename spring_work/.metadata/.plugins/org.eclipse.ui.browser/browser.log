@@ -1,0 +1,14 @@
+
+1월 25, 2022 14:27:16.325 NEW SESSION
+1월 25, 2022 14:27:16.325 [21840:15492:0125/142716.322:ERROR:chrome_browser_main_extra_parts_metrics.cc(227)] START: ReportBluetoothAvailability(). If you don't see the END: message, this is crbug.com/1216328.
+1월 25, 2022 14:27:16.325 [21840:15492:0125/142716.322:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] END: ReportBluetoothAvailability()
+1월 25, 2022 14:27:16.326 [21840:15492:0125/142716.322:ERROR:chrome_browser_main_extra_parts_metrics.cc(235)] START: GetDefaultBrowser(). If you don't see the END: message, this is crbug.com/1216328.
+1월 25, 2022 14:27:16.326 [21840:15492:0125/142716.324:ERROR:chrome_browser_main_extra_parts_metrics.cc(239)] END: GetDefaultBrowser()
+1월 25, 2022 14:27:16.328 [21840:22524:0125/142716.327:ERROR:device_event_log_impl.cc(214)] [14:27:16.327] USB: usb_device_handle_win.cc:1050 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 25, 2022 14:27:16.331 [21840:22524:0125/142716.331:ERROR:device_event_log_impl.cc(214)] [14:27:16.331] USB: usb_device_handle_win.cc:1050 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 25, 2022 15:22:21.538 [9824:19824:0125/152221.538:ERROR:chrome_browser_main_extra_parts_metrics.cc(227)] START: ReportBluetoothAvailability(). If you don't see the END: message, this is crbug.com/1216328.
+1월 25, 2022 15:22:21.539 [9824:19824:0125/152221.538:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] END: ReportBluetoothAvailability()
+1월 25, 2022 15:22:21.540 [9824:19824:0125/152221.538:ERROR:chrome_browser_main_extra_parts_metrics.cc(235)] START: GetDefaultBrowser(). If you don't see the END: message, this is crbug.com/1216328.
+1월 25, 2022 15:22:21.540 [9824:19824:0125/152221.540:ERROR:chrome_browser_main_extra_parts_metrics.cc(239)] END: GetDefaultBrowser()
+1월 25, 2022 15:22:21.542 [9824:21692:0125/152221.542:ERROR:device_event_log_impl.cc(214)] [15:22:21.542] USB: usb_device_handle_win.cc:1050 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+1월 25, 2022 15:22:21.547 [9824:21692:0125/152221.546:ERROR:device_event_log_impl.cc(214)] [15:22:21.546] USB: usb_device_handle_win.cc:1050 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)

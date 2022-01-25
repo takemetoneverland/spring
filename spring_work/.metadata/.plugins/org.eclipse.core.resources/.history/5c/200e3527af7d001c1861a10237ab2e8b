@@ -1,0 +1,21 @@
+package com.spring.basic.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.spring.basic.model.BirthVO;
+
+@Controller
+public class BirthController {
+	@GetMapping("/birth-form")
+	public void birthForm() {}
+	
+	@PostMapping("/birth-form")
+	public void birth(@ModelAttribute("info") BirthVO vo) {
+		System.out.println(vo.getYear() + vo.getMonth() + vo.getDay());
+	}
+
+}

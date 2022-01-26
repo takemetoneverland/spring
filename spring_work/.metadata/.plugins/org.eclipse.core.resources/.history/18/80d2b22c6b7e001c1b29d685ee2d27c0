@@ -1,0 +1,5 @@
+package com.spring.basic.repository;
+
+public class IBoardDAO {
+
+}

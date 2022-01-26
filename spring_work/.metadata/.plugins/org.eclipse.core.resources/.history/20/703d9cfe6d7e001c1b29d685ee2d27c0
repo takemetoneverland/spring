@@ -1,0 +1,16 @@
+package com.spring.basic.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.spring.basic.service.IBoardService;
+
+@Controller
+@RequestMapping("/board")
+public class BoardController {
+	
+	@Autowired
+	private IBoardService service;
+
+}

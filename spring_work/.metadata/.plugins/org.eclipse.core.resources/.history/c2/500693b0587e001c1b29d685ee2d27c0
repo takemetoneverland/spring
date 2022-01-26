@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<%--
+		- /selectOne 요청을 통해 해당 학번을 가진 학생의 성적 정보를 조회하여
+		search-result.jsp에 한 학생의 모든 정보를 적절하게 출력하세요. (디자인은 안해도 됩니다.)
+	 --%>
+
+</body>
+</html>

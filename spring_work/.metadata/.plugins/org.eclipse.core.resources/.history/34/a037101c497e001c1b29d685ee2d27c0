@@ -1,0 +1,32 @@
+package com.spring.basic.repository;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.spring.basic.model.ScoreVO;
+
+@Repository
+public class ScoreDAO implements IScoreDAO {
+
+	@Override
+	public void insertScore(ScoreVO score) {
+
+	}
+
+	@Override
+	public List<ScoreVO> selectAllscores() {
+		return null;
+	}
+
+	@Override
+	public void deleteScore(int num) {
+
+	}
+
+	@Override
+	public ScoreVO selectOne(int num) {
+		return null;
+	}
+
+}

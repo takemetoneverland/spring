@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.spring.db.repository.IBoardMapper">
+
+	<!-- DB컬럼명과 VO의 필드명을 맞추는 ResultMap 선언 -->
+	<resultMap type="com.spring.db.model.BoardVO" id="BoardMap">
+		<id property="boardNo" column="board_no"/>
+	</resultMap>
+	
+	<!-- 게시글 등록 기능 -->
+	<insert id="insertArticle">
+		INSERT INTO jdbc_board
+		VALUES (bid_seq.NEXTVAL, #{writer}, #{title}, #{content})
+	</insert>
+	
+	<!-- 전체 게시글 목록 -->
+	<select id="getArticles" resultMap="BoardMap">
+		SELECT * FROM jdbc_board
+		ORDER BY board_no DESC
+	</select>
+	
+	<!-- 게시글 상세보기 -->
+	<select id="getArticle" resultMap="BoardMap">
+		SELECT * FROM jdbc_board
+		WHERE board_no=#{bId}
+	</select>
+	
+	<!-- 게시글 삭제 -->
+	<delete id="deleteArticle">
+		DELETE FROM jdbc_board
+		WHERE board_no=#{bId}
+	</delete>
+	
+	<!-- 게시글 수정 -->
+	<update id="updateArticle">
+		UPDATE jdbc_board SET 
+		writer=#{writer}, title=#{title}, content=#{content}
+		WHERE board_no=#{boardNo}		
+	</update>
+	
+	<!-- 게시글 검색 -->
+	<select id="searchList" resultMap="BoardMap">
+		SELECT * FROM jdbc_board
+		WHERE writer LIKE #{keyword}
+	</select>
+
+</mapper>

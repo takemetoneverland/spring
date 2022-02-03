@@ -77,6 +77,13 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- spring-test 모듈 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${org.springframework-version}</version>
+			<scope>test</scope>
+		</dependency>
 
 		<!-- AspectJ -->
 		<dependency>

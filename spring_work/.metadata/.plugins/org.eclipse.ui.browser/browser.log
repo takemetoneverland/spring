@@ -74,3 +74,11 @@
 1월 27, 2022 22:13:22.316 [9644:10508:0127/221322.316:ERROR:device_event_log_impl.cc(214)] [22:13:22.317] USB: usb_device_handle_win.cc:1050 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
 1월 27, 2022 22:50:22.296 [9644:10508:0127/225022.296:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
 1월 27, 2022 22:50:22.297 [9644:10508:0127/225022.296:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+2월 04, 2022 09:45:49.884 NEW SESSION
+2월 04, 2022 09:45:49.884 [7988:19048:0204/094549.881:ERROR:chrome_browser_main_extra_parts_metrics.cc(227)] START: ReportBluetoothAvailability(). If you don't see the END: message, this is crbug.com/1216328.
+2월 04, 2022 09:45:49.885 [7988:19048:0204/094549.882:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] END: ReportBluetoothAvailability()
+2월 04, 2022 09:45:49.885 [7988:19048:0204/094549.882:ERROR:chrome_browser_main_extra_parts_metrics.cc(235)] START: GetDefaultBrowser(). If you don't see the END: message, this is crbug.com/1216328.
+2월 04, 2022 09:45:49.886 [7988:19048:0204/094549.883:ERROR:chrome_browser_main_extra_parts_metrics.cc(239)] END: GetDefaultBrowser()
+2월 04, 2022 09:45:49.886 [7988:11072:0204/094549.886:ERROR:device_event_log_impl.cc(214)] [09:45:49.886] USB: usb_device_handle_win.cc:1050 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 04, 2022 09:45:49.890 [7988:11072:0204/094549.890:ERROR:device_event_log_impl.cc(214)] [09:45:49.890] USB: usb_device_handle_win.cc:1050 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)

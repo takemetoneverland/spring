@@ -49,19 +49,20 @@ header.masthead {
 						</thead>
 
 						<!-- 게시물이 들어갈 공간 -->
+						<c:forEach var="b" items="${articles}">
 							<tr style="color: #643691;">
-								<td>글번호</td>
-								<td>이름</td>
+								<td>${b.boardNo}</td>
+								<td>${b.writer}</td>
 
-								<td><a style="margin-top: 0; height: 40px; color: orange;" href="#">
-										제목
+								<td><a style="margin-top: 0; height: 40px; color: orange;" href='<c:url value="/board/content/${b.boardNo}" />'>
+										${b.title}
 									</a>
 								</td>
 
-								<td>날짜</td>
-								<td>조회수</td>
+								<td>${b.regDate}</td>
+								<td>${b.viewCnt}</td>
 							</tr>
-						
+						</c:forEach>
 					</table>
 					
 					<!-- 페이징 처리 부분  -->
@@ -104,7 +105,7 @@ header.masthead {
 	                        </div>
 	                    </div>
 	                    <div class="col-sm-2">
-							<a href="#" class="btn btn-cpp float-right">글쓰기</a>
+							<a href='<c:url value="/board/write" />' class="btn btn-cpp float-right">글쓰기</a>
 						</div>
 						<div class="col-sm-2"></div>
 					</div>
@@ -112,3 +113,12 @@ header.masthead {
 		
 	</div>
 <jsp:include page="../include/footer.jsp" />
+
+<script>
+
+	const msg = '${msg}';
+	if(msg === 'delSuccess') {
+		alert('삭제가 완료되었습니다.');
+	}
+
+</script>

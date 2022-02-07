@@ -1,7 +1,5 @@
 package com.spring.mvc.board;
 
-import java.util.List;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +29,7 @@ public class BoardMapperTest {
 		}
 	}
 	
+	/*
 	//게시글 목록 전체 조회 테스트
 	//게시물 갯수 몇개인지 출력하고, 게시글 모든 내용을 toString()으로 출력하세요.
 	@Test
@@ -41,6 +40,7 @@ public class BoardMapperTest {
 			System.out.println(vo); //.toString 붙이지 않아도 자동으로 됨. lombok
 		}		
 	}
+	*/
 
 	//게시물 단일 조회 테스트
 	//44번글을 조회해서 글 상세 내용을 출력해 주세요.

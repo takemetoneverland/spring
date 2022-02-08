@@ -90,9 +90,7 @@
 			</div>
 
 			<div class="modal-body">
-
-				<form action="#" name="signup" id="signUpForm" method="post"
-					style="margin-bottom: 0;">
+				
 					<table
 						style="cellpadding: 0; cellspacing: 0; margin: 0 auto; width: 100%">
 						<tr>
@@ -156,7 +154,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td style="width: 100%; text-align: center; colspan: 2;"><input
+							<td style="width: 100%; text-align: center; colspan: 2;">
+							<input
 								type="button" value="회원가입" 
 								class="btn form-control tooltipstered" id="signup-btn"
 								style="background-color: #643691; margin-top: 0; height: 40px; color: white; border: 0px solid #388E3C; opacity: 0.8">
@@ -164,7 +163,6 @@
 						</tr>
 
 					</table>
-				</form>
 			</div>
 		</div>
 	</div>

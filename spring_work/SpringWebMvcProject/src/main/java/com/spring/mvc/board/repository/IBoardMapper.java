@@ -15,7 +15,7 @@ public interface IBoardMapper {
 	void insert(BoardVO article);
 	
 	/*
-	 - MyBatis로 DB연동을 진행할 때 파라미터 값이 2개 이상이라면
+	 - MyBatis로 DB연동을 진행할 때 파라미터 값이 2개 이상이라면 (그냥 보내면 인식하지 못함. 하나는 상관 없음)
 	 1. @Param을 이용해서 작성하는 법.
 	 2. Map으로 포장해서 보내는 법.
 	 3. 객체 하나를 매개값으로 보내는 법

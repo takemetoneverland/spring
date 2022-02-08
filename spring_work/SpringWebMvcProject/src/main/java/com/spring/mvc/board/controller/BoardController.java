@@ -112,7 +112,7 @@ public class BoardController {
 	//{} 안에 변수명을 지어주시고, @PathVariable 괄호 안에 영역을 지목해서
 	//값을 받아온다.
 	public String content(@PathVariable int boardNo, Model model,
-						  @ModelAttribute("p") PageVO paging) { //변수 이름이 같으면 () 생략 가능
+						  @ModelAttribute("p") SearchVO paging) { //변수 이름이 같으면 () 생략 가능
 		System.out.println("/board/content: GET");
 		System.out.println("요청된 글 번호: " + boardNo);
 		model.addAttribute("article", service.getArticle(boardNo));

@@ -34,7 +34,19 @@ public class BoardService implements IBoardService {
 		
 		return mapper.getArticleList(datas);
 		*/
-		return mapper.getArticleList(search);
+		
+		List<BoardVO> list = mapper.getArticleList(search);
+		
+		for(BoardVO article : list) {
+			long now = System.currentTimeMillis(); //현재 시간 읽어오기
+			long regTime = article.getRegDate().getTime(); //게시물의 작성 시간 밀리초로 읽어오기
+			
+			if(now - regTime < 60 * 60 * 24 * 1000) {
+				article.setNewMark(true);
+			}
+		}
+		
+		return list;
 	}
 
 	@Override

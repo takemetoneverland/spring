@@ -45,8 +45,11 @@
 				content LIKE '%'||#{keyword}||'%'</if> <if test="condition == 'titleContent'">WHERE 
 				title LIKE '%'||#{keyword}||'%' OR content LIKE '%'||#{keyword}||'%'</if> -->
 			<!-- <choose>
-					<when test="">~~~</when> <when test="">~~~</when> <when test="">~~~</when> 
-				<otherwise>~~~</otherwise> </choose> -->
+					<when test="">~~~</when>
+					<when test="">~~~</when>
+					<when test="">~~~</when> 
+					<otherwise>~~~</otherwise> 
+				</choose> -->
 			<include refid="search" />
 			ORDER BY board_no DESC
 			) tbl

@@ -57,12 +57,18 @@ header.masthead {
 								<td>${b.boardNo}</td>
 								<td>${b.writer}</td>
 
-								<td><a style="margin-top: 0; height: 40px; color: orange;" href='<c:url value="/board/content/${b.boardNo}?page=${pc.paging.page}&contPerPage=${pc.paging.countPerPage}" />'>
+								<td><a style="margin-top: 0; height: 40px; color: orange;" href='<c:url value="/board/content/${b.boardNo}${pc.makeURI(pc.paging.page)}" />'>
 										${b.title}
 									</a>
+									&nbsp;
+									<c:if test="${b.newMark}">
+										<img alt="newMark" src='<c:url value="/img/icon_new.gif" />'>
+									</c:if>
 								</td>
 
-								<td>${b.regDate}</td>
+								<td>
+									<fmt:formatDate value="${b.regDate}" pattern="yyyy년 MM월 dd일 HH:mm" />
+								</td>
 								<td>${b.viewCnt}</td>
 							</tr>
 						</c:forEach>
@@ -73,7 +79,7 @@ header.masthead {
 						<!-- 이전 버튼 -->
 						<c:if test="${pc.prev}">
 	                       	<li class="page-item">
-								<a class="page-link" href='<c:url value="/board/list?page=${pc.beginPage-1}&countPerPage=${pc.paging.countPerPage}" />' 
+								<a class="page-link" href='<c:url value="/board/list${pc.makeURI(pc.beginPage-1)}" />' 
 								style="background-color: #643691; margin-top: 0; height: 40px; color: white; border: 0px solid #f78f24; opacity: 0.8">이전</a>
 							</li>
 						</c:if>
@@ -81,14 +87,14 @@ header.masthead {
 						<!-- 페이지 번호 버튼 -->
 						<c:forEach var="pageNum" begin="${pc.beginPage}" end="${pc.endPage}">						
 							<li class="page-item">
-							   <a href='<c:url value="/board/list?page=${pageNum}&countPerPage=${pc.paging.countPerPage}" />' class="page-link ${pc.paging.page == pageNum ? 'page-active' : ''}" style="margin-top: 0; height: 40px; color: pink; border: 1px solid #643691;">${pageNum}</a>
+							   <a href='<c:url value="/board/list${pc.makeURI(pageNum)}" />' class="page-link ${pc.paging.page == pageNum ? 'page-active' : ''}" style="margin-top: 0; height: 40px; color: pink; border: 1px solid #643691;">${pageNum}</a>
 							</li>
 						</c:forEach>
 					   
 					   <!-- 다음 버튼 -->
 					   <c:if test="${pc.next}">
 						    <li class="page-item">
-						      <a class="page-link" href='<c:url value="/board/list?page=${pc.endPage+1}&countPerPage=${pc.paging.countPerPage}" />' 
+						      <a class="page-link" href='<c:url value="/board/list${pc.makeURI(pc.endPage+1)}" />' 
 						      style="background-color: #643691; margin-top: 0; height: 40px; color: white; border: 0px solid #f78f24; opacity: 0.8">다음</a>
 						    </li>
 					   </c:if>

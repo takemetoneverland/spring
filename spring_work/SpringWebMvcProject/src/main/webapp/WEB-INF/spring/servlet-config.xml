@@ -29,6 +29,26 @@
 	
 	<context:component-scan base-package="com.spring.mvc" />
 	
+	<!-- 인터셉터 빈 등록 방식 -->
 	
+	<interceptors>
+		<interceptor>
+			<!-- <mapping path="/board/**"/> --> <!-- 내가 지금 등록하려는 인터셉터가 어떤 url에서 작동할 것인지 -->
+			<mapping path="/board/write"/>
+			<mapping path="/board/content/**"/>
+			<beans:bean class="com.spring.mvc.board.commons.interceptor.BoardInterceptor" />
+		</interceptor>
+	</interceptors>
 	
 </beans:beans>
+
+
+
+
+
+
+
+
+
+
+

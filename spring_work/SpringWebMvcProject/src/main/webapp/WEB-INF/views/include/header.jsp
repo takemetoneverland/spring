@@ -128,9 +128,20 @@
             <a class="nav-link js-scroll-trigger" href='<c:url value="/board/list" />'>BOARD</a>
           </li>
           
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#log-in">LOGIN</a>
-          </li>
+          <c:if test="${login != null}">
+          	<li class="nav-item">
+	            <a class="nav-link js-scroll-trigger" href="#">MYPAGE</a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link js-scroll-trigger" href='<c:url value="/user/logout" />' onclick="return confirm('정말 로그아웃 하시겠어요?')">LOGOUT</a>
+	          </li>
+          </c:if>
+          
+          <c:if test="${login == null}"> <!-- ${sessionScope.login == null} 정식인데 생략 가능 -->
+	          <li class="nav-item">
+	            <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#log-in">LOGIN</a>
+	          </li>
+          </c:if>
           
         </ul>
       </div>

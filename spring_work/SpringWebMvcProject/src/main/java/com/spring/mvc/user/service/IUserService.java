@@ -1,5 +1,7 @@
 package com.spring.mvc.user.service;
 
+import java.util.Date;
+
 import com.spring.mvc.user.model.UserVO;
 
 public interface IUserService {
@@ -15,5 +17,8 @@ public interface IUserService {
 
 	//회원 탈퇴 기능
 	void delete(String account);
+	
+	//자동 로그인 쿠키값 DB 저장 처리.
+	void keepLogin(String session, Date limitTime, String account);
 
 }

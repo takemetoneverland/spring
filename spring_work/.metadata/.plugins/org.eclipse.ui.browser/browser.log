@@ -114,3 +114,13 @@
 2월 07, 2022 21:45:10.146 [12500:4072:0207/214510.144:ERROR:chrome_browser_main_extra_parts_metrics.cc(239)] END: GetDefaultBrowser()
 2월 07, 2022 21:45:10.148 [12500:1808:0207/214510.147:ERROR:device_event_log_impl.cc(214)] [21:45:10.147] USB: usb_device_handle_win.cc:1050 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
 2월 07, 2022 21:45:10.152 [12500:1808:0207/214510.151:ERROR:device_event_log_impl.cc(214)] [21:45:10.151] USB: usb_device_handle_win.cc:1050 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+2월 09, 2022 20:19:54.588 NEW SESSION
+2월 09, 2022 20:19:54.589 [13184:15852:0209/201954.586:ERROR:chrome_browser_main_extra_parts_metrics.cc(227)] START: ReportBluetoothAvailability(). If you don't see the END: message, this is crbug.com/1216328.
+2월 09, 2022 20:19:54.589 [13184:15852:0209/201954.586:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] END: ReportBluetoothAvailability()
+2월 09, 2022 20:19:54.590 [13184:15852:0209/201954.586:ERROR:chrome_browser_main_extra_parts_metrics.cc(235)] START: GetDefaultBrowser(). If you don't see the END: message, this is crbug.com/1216328.
+2월 09, 2022 20:19:54.591 [13184:15852:0209/201954.588:ERROR:chrome_browser_main_extra_parts_metrics.cc(239)] END: GetDefaultBrowser()
+2월 09, 2022 20:45:11.274 [2228:15572:0209/204511.274:ERROR:chrome_browser_main_extra_parts_metrics.cc(227)] START: ReportBluetoothAvailability(). If you don't see the END: message, this is crbug.com/1216328.
+2월 09, 2022 20:45:11.275 [2228:15572:0209/204511.274:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] END: ReportBluetoothAvailability()
+2월 09, 2022 20:45:11.275 [2228:15572:0209/204511.274:ERROR:chrome_browser_main_extra_parts_metrics.cc(235)] START: GetDefaultBrowser(). If you don't see the END: message, this is crbug.com/1216328.
+2월 09, 2022 20:45:11.276 [2228:15572:0209/204511.276:ERROR:chrome_browser_main_extra_parts_metrics.cc(239)] END: GetDefaultBrowser()

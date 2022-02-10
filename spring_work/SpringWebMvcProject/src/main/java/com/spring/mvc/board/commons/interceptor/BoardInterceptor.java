@@ -38,7 +38,7 @@ public class BoardInterceptor implements HandlerInterceptor {
 		
 		Object data = modelAndView.getModel().get("article");
 		System.out.println("article이라는 이름의 데이터: " + data);
-		modelAndView.setViewName("/");
+//		modelAndView.setViewName("/"); viewName 수정
 		
 		/*
 		 컨트롤러에서 로직을 처리하고 나가는 흐름을 붙잡아서

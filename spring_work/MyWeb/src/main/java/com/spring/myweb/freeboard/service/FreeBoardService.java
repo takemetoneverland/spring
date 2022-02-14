@@ -11,7 +11,7 @@ import com.spring.myweb.util.PageVO;
 
 @Service
 public class FreeBoardService implements IFreeBoardService {
-	
+
 	@Autowired
 	private IFreeBoardMapper mapper;
 
@@ -23,20 +23,30 @@ public class FreeBoardService implements IFreeBoardService {
 
 	@Override
 	public List<FreeBoardVO> getList(PageVO vo) {
-		// TODO Auto-generated method stub
-		return null;
+		List<FreeBoardVO> list = mapper.getList(vo);
+
+		for(FreeBoardVO article : list) {
+			//현재 시간 읽어오기
+			long now = System.currentTimeMillis();
+			//각 게시물들의 작성시간 읽어오기 (밀리초)
+			long regTime = article.getRegdate().getTime();
+
+			//이틀이 지나지 않았는지 비교해서 newMark를 true로 처리
+			if(now - regTime < 60 * 60 * 24 * 2 * 1000) {
+				article.setNewMark(true);
+			}
+		}
+		return list;
 	}
 
 	@Override
 	public int getTotal(PageVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		return mapper.getTotal(vo);
 	}
 
 	@Override
 	public FreeBoardVO getContent(int bno) {
-		// TODO Auto-generated method stub
-		return null;
+		return mapper.getContent(bno);
 	}
 
 	@Override

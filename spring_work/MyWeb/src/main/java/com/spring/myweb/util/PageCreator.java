@@ -2,9 +2,11 @@ package com.spring.myweb.util;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 public class PageCreator {
 
 

@@ -17,8 +17,7 @@ public class FreeBoardService implements IFreeBoardService {
 
 	@Override
 	public void regist(FreeBoardVO vo) {
-		// TODO Auto-generated method stub
-
+		mapper.regist(vo);
 	}
 
 	@Override
@@ -51,14 +50,12 @@ public class FreeBoardService implements IFreeBoardService {
 
 	@Override
 	public void update(FreeBoardVO vo) {
-		// TODO Auto-generated method stub
-
+		mapper.update(vo);
 	}
 
 	@Override
 	public void delete(int bno) {
-		// TODO Auto-generated method stub
-
+		mapper.delete(bno);
 	}
 
 }

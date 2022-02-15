@@ -80,15 +80,6 @@ public class BoardControllerTest {
 	//전송방식은 post 방식입니다.
 	//수정 후 이동하는 페이지는 해당 글의 상세보기 페이지입니다.
 	//컨트롤러가 리턴하는 viewName을 출력해 주세요. ("/board/modify") 제목과 내용만. 작성자는 수정x
-	@Test
-	public void testModify() throws Exception {
-		String viewName = mockMvc.perform(MockMvcRequestBuilders.post("/board/modify")
-				.param("title", "수정된 테스트 글 제목2")
-				.param("content", "수정된 테스트 글 내용 2")
-				.param("boardNo", "5")
-				).andReturn().getModelAndView().getViewName();
-		log.info(viewName);
-	}
 
 	//42번글을 삭제하세요.
 	//전송 방식은 post방식이고, 이동하는 곳은 목록 요청이 재요청될 것입니다.

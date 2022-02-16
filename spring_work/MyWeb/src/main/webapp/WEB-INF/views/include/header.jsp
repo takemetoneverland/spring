@@ -50,8 +50,16 @@
                                      <span class="caret"></span>   
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Join</a></li>
-                                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                    	<c:choose>
+                                    		<c:when test="${login == null}">
+		                                        <li><a href='<c:url value="/user/userJoin" />'><span class="glyphicon glyphicon-user"></span> Join</a></li>
+		                                        <li><a href='<c:url value="/user/userLogin" />'><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                    		</c:when>
+                                    		<c:otherwise>
+                                    			<li><a href='<c:url value="/user/userMyPage" />'><span class="glyphicon glyphicon-user"></span> Mypage</a></li>
+		                                        <li><a href='<c:url value="/user/userLogout" />'><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                                    		</c:otherwise>
+                                    	</c:choose>
                                     </ul>
                                 </li>
                             </ul>

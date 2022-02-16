@@ -5,18 +5,21 @@
 
 <mapper namespace="com.spring.myweb.user.mapper.IUserMapper">
 
-
+	<select id="idCheck" resultType="int">
+		SELECT COUNT(*)	FROM users
+		WHERE userId = #{id} <!-- #{매개변수의 이름} -->
+	</select>
+	
+	<insert id="join">
+		INSERT INTO users
+		(userId, userPw, userName, userPhone1, userPhone2, userEmail1, userEmail2, addrBasic, addrDetail, addrZipNum)
+		VALUES(#{userId}, #{userPw}, #{userName}, #{userPhone1}, #{userPhone2}, #{userEmail1}, #{userEmail2}, #{addrBasic}, #{addrDetail}, #{addrZipNum})
+	</insert>
+	
+	<select id="login" resultType="com.spring.myweb.command.UserVo">
+		SELECT * FROM users
+		WHERE userId = #{id} <!-- @param() 안에 작성했던 이름 그대로 작성해야한다. -->
+		AND userPw = #{pw}
+	</select>
 	
 </mapper>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-  

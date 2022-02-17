@@ -5,6 +5,31 @@
 
 <mapper namespace="com.spring.myweb.user.mapper.IUserMapper">
 
+	<!-- VO클래스의 멤버변수가 컬렉션 타입일 경우에는 collection 태그를 이용한다. -->
+	<!-- collection 타입의 변수에 값을 매길 때는 어떤 객체로 포장해서 넣을 지를
+		새로운 resultMap으로 선언해 주어야 한다. -->
+	<resultMap type="com.spring.myweb.command.UserVO" id="myPageInfo">
+		<id property="userId" column="USERID" />
+	    <result property="userName" column="USERNAME"/>
+	    <result property="userPhone1" column="USERPHONE1"/>
+	    <result property="userPhone2" column="USERPHONE2"/>
+	    <result property="userEmail1" column="USEREMAIL1"/>
+	    <result property="userEmail2" column="USEREMAIL2"/>
+	    <result property="addrBasic" column="ADDRBASIC"/>
+	    <result property="addrDetail" column="ADDRDETAIL"/>
+	    <result property="addrZipNum" column="ADDRZIPNUM"/>
+		<!-- 프로퍼티에는 변수 이름. resultMap="list"를 참고해라 -->
+		<collection property="userBoardList" resultMap="list" />
+	</resultMap>
+	
+	<!-- collection에 들어갈 객체가 어떤 식으로 포장 될 지를 명시해 주는 resultMap -->
+	<!-- 기존에는 컬럼과 변수의 이름이 같으면 작성하지 않았으나 지금은 어떤 데이터가 포장될 지 명시해야 함. -->
+	<resultMap type="com.spring.myweb.command.FreeBoardVO" id="list">
+		<id property="bno" column="bno" />
+		<result property="title" column="title" />
+		<result property="regdate" column="regdate" />
+	</resultMap>
+
 	<select id="idCheck" resultType="int">
 		SELECT COUNT(*)	FROM users
 		WHERE userId = #{id} <!-- #{매개변수의 이름} -->
@@ -16,10 +41,51 @@
 		VALUES(#{userId}, #{userPw}, #{userName}, #{userPhone1}, #{userPhone2}, #{userEmail1}, #{userEmail2}, #{addrBasic}, #{addrDetail}, #{addrZipNum})
 	</insert>
 	
-	<select id="login" resultType="com.spring.myweb.command.UserVo">
+	<select id="login" resultType="com.spring.myweb.command.UserVO">
 		SELECT * FROM users
 		WHERE userId = #{id} <!-- @param() 안에 작성했던 이름 그대로 작성해야한다. -->
 		AND userPw = #{pw}
 	</select>
 	
+	<!-- resultMap="myPageInfo"를 참고해서 가져온다. -->
+	<select id="getInfo" resultMap="myPageInfo">
+		SELECT userId,
+			   userName,
+			   userPhone1,
+			   userPhone2,
+			   userEmail1,
+			   userEmail2,
+			   addrBasic,
+			   addrDetail,
+			   addrZipNum,
+			   f.bno,
+			   f.title,
+			   f.regdate
+		FROM users u LEFT OUTER JOIN freeboard f
+		ON u.userId = f.writer
+		WHERE u.userId = #{userId}
+		ORDER BY f.bno DESC
+	</select>
+	
+	<update id="updateUser">
+		UPDATE users
+		SET userPw = #{userPw}, userEmail1 = #{userEmail1},
+		userEmail2 = #{userEmail2},	userPhone1 = #{userPhone1},
+		userPhone2 = #{userPhone2}, addrBasic = #{addrBasic},
+		addrDetail = #{addrDetail}, addrZipNum = #{addrZipNum}
+		WHERE userId = #{userId}		 
+	</update>	
+	
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+

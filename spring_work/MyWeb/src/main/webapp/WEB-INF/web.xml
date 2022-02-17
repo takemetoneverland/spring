@@ -21,6 +21,7 @@
 			<param-value>
 				/WEB-INF/config/servlet-config.xml
 				/WEB-INF/config/interceptor-config.xml
+				/WEB-INF/config/email-config.xml <!-- 직접 만든거라 여기 등록해야함 -->
 			</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>

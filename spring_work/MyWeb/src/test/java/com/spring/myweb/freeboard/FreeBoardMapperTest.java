@@ -18,10 +18,10 @@ public class FreeBoardMapperTest {
 	
 	@Test
 	public void registTest() {
-		for(int i=1; i<=320; i++) {
+		for(int i=1; i<=30; i++) {
 			FreeBoardVO vo = new FreeBoardVO();
 			vo.setTitle("테스트 글쓰기 " + i);
-			vo.setWriter("김테스트 " + i);
+			vo.setWriter("asdf1234");
 			vo.setContent("테스트 글쓰기 내용입니다. " + i);
 			mapper.regist(vo);
 		}

@@ -9,6 +9,7 @@
 	<!-- web.xml에 초기 설정 파일로 이 파일을 추가 -->
 	
 	<bean id="userLoginSuccessHandler" class="com.spring.myweb.util.interceptor.UserLoginSuccessHandler" />
+	<bean id="boardAuthHandler" class="com.spring.myweb.util.interceptor.BoardAuthHandler" />
 	
 	<mvc:interceptors>
 	
@@ -16,6 +17,14 @@
 		<mvc:interceptor>
 			<mvc:mapping path="/user/login"/>
 			<ref bean="userLoginSuccessHandler" />
+		</mvc:interceptor>
+		
+		<!-- 게시글 권한 인터셉터 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/freeBoard/freeModify"/>
+			<mvc:mapping path="/freeBoard/freeUpdate"/>
+			<mvc:mapping path="/freeBoard/freeDelete"/>
+			<ref bean="boardAuthHandler" />
 		</mvc:interceptor>
 	
 	</mvc:interceptors>

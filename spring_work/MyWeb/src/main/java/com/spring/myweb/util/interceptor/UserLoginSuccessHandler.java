@@ -12,7 +12,7 @@ import com.spring.myweb.command.UserVO;
 
 public class UserLoginSuccessHandler implements HandlerInterceptor {
 
-	//로그인 처리 이후에 시행되는 핸드러 (postHandle) 오버라이딩
+	//로그인 처리 이후에 시행되는 핸들러 (postHandle) 오버라이딩
 	//1. /login 요청으로 들어올 때 실행되도록 xml 파일에 빈으로 등록 후 매핑.
 	
 	@Override //오버라이딩은 메서드 이름, 매개변수, 리턴타입이 같아야 함. 접근제한자는 부모와 같거나 넓어야 함.
@@ -41,13 +41,3 @@ public class UserLoginSuccessHandler implements HandlerInterceptor {
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-

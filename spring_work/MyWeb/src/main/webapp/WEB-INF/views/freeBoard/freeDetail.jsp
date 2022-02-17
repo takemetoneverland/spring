@@ -32,7 +32,7 @@
 						<textarea id="content" class="form-control" rows="10" readonly>${article.content}</textarea>
 					</div>
 
-					<button type="button" class="btn btn-primary" onclick="location.href='<c:url value="/freeBoard/freeModify?bno=${article.bno}" />'">수정</button> <!-- button type 안주면 자동으로 submit됨(form태그 있어서) -->
+					<button type="button" class="btn btn-primary" onclick="location.href='<c:url value="/freeBoard/freeModify?bno=${article.bno}&writer=${article.writer}" />'">수정</button> <!-- button type 안주면 자동으로 submit됨(form태그 있어서) -->
 					<button type="button" class="btn btn-dark" onclick="location.href='<c:url value="/freeBoard/freeList?pageNum=${p.pageNum}&keyword=${p.keyword}&condition=${p.condition}" />'">목록</button>
 				</form>
 

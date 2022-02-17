@@ -1,10 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-    <typeInfo handle="=SpringDBAccess/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.db.repository{IScoreDAO.java[IScoreDAO" modifiers="513" timestamp="1643249933924"/>
-    <typeInfo handle="=SpringWebMvcProject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.mvc.board.service{IBoardService.java[IBoardService" modifiers="513" timestamp="1644217974008"/>
-    <typeInfo handle="=SpringWebMvcProject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.mvc.user.service{IUserService.java[IUserService" modifiers="513" timestamp="1644457320052"/>
-    <typeInfo handle="=MyWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.myweb.freeboard.service{IFreeBoardService.java[IFreeBoardService" modifiers="513" timestamp="1644478446303"/>
-    <typeInfo handle="=MyWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.myweb.reply.service{IReplyService.java[IReplyService" modifiers="513" timestamp="1644801180136"/>
-    <typeInfo handle="=MyWeb/C:\/Program Files\/Java\/jdk-11.0.12\/lib\/jrt-fs.jar`java.desktop=/maven.pomderived=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/11\/docs\/api\/=/&lt;sun.java2d.marlin(IRendererContext.class[IRendererContext" modifiers="1536" timestamp="1634612817075"/>
-    <typeInfo handle="=MyWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.myweb.user.service{IUserService.java[IUserService" modifiers="513" timestamp="1644970209434"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>

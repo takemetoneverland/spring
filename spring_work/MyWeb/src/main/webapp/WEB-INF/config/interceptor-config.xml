@@ -10,6 +10,7 @@
 	
 	<bean id="userLoginSuccessHandler" class="com.spring.myweb.util.interceptor.UserLoginSuccessHandler" />
 	<bean id="boardAuthHandler" class="com.spring.myweb.util.interceptor.BoardAuthHandler" />
+	<bean id="userAuthHandler" class="com.spring.myweb.util.interceptor.UserAuthHandler" />
 	
 	<mvc:interceptors>
 	
@@ -21,10 +22,17 @@
 		
 		<!-- 게시글 권한 인터셉터 -->
 		<mvc:interceptor>
-			<mvc:mapping path="/freeBoard/freeModify"/>
-			<mvc:mapping path="/freeBoard/freeUpdate"/>
-			<mvc:mapping path="/freeBoard/freeDelete"/>
+			<mvc:mapping path="/freeBoard/freeModify"/> <!-- 수정페이지 이동 -->
+			<mvc:mapping path="/freeBoard/freeUpdate"/> <!-- 수정 요청 -->
+			<mvc:mapping path="/freeBoard/freeDelete"/> <!-- 삭제 요청 -->
 			<ref bean="boardAuthHandler" />
+		</mvc:interceptor>
+		
+		<!-- 로그인 권한을 체크하는 핸들러 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/freeBoard/freeRegist"/> <!-- 글쓰기페이지 이동 -->
+			<mvc:mapping path="/user/userMyPage"/> <!-- 마이페이지 이동 -->
+			<ref bean="userAuthHandler" />
 		</mvc:interceptor>
 	
 	</mvc:interceptors>

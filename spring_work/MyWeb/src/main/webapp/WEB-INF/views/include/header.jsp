@@ -39,7 +39,7 @@
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="<c:url value='/' />">Main</a></li>
                                 <li><a href="<c:url value='/freeBoard/freeList' />">자유게시판</a></li>
-                                <li><a href="#">SNS</a></li>
+                                <li><a href='<c:url value="/snsBoard/snsList" />'>SNS</a></li>
 <!--                                 <li><a href="#">Grid Board2</a></li>
                                 <li><a href="#">Board</a></li>
  -->                            </ul>

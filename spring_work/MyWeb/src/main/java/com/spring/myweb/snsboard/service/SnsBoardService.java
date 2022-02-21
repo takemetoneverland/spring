@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring.myweb.command.SnsBoardVO;
 import com.spring.myweb.snsboard.mapper.ISnsBoardMapper;
+import com.spring.myweb.util.PageVO;
 
 @Service
 public class SnsBoardService implements ISnsBoardService {
@@ -16,26 +17,22 @@ public class SnsBoardService implements ISnsBoardService {
 
 	@Override
 	public void insert(SnsBoardVO vo) {
-		// TODO Auto-generated method stub
-
+		mapper.insert(vo);
 	}
 
 	@Override
-	public List<SnsBoardVO> getList() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<SnsBoardVO> getList(PageVO paging) {
+		return mapper.getList(paging);
 	}
 
 	@Override
 	public SnsBoardVO getDetail(int bno) {
-		// TODO Auto-generated method stub
-		return null;
+		return mapper.getDetail(bno);
 	}
 
 	@Override
 	public void delete(int bno) {
-		// TODO Auto-generated method stub
-
+		mapper.delete(bno);
 	}
 
 }
